@@ -9,7 +9,7 @@ This repository contains portfolio artifacts from CS 300, showcasing work in dat
 
 | Project | Artifact | Location |
 |---------|----------|----------|
-| Project One | Run-time and memory analysis of four data structures | [`project-one/data_structure_analysis.md`](project-one/data_structure_analysis.md) |
+| Project One | Run-time and memory analysis of vector, hash table, and BST | [`project-one/data_structure_analysis.md`](project-one/data_structure_analysis.md) |
 | Project Two | Advising Assistance Program — BST that sorts and prints CS courses in alphanumeric order | [`project-two/ProjectTwo.cpp`](project-two/ProjectTwo.cpp) |
 
 ### Running Project Two
@@ -30,11 +30,11 @@ g++ -o ProjectTwo ProjectTwo.cpp
 
 ### What was the problem you were solving in the projects for this course?
 
-In Project One, the problem was choosing the best data structure to store and manage thousands of municipal auction bid records. I needed to compare how vectors, linked lists, hash tables, and binary search trees perform when loading data, searching by bid ID, removing records, and displaying results. In Project Two, the problem was building an advising tool for the Computer Science program that loads course data from a CSV file, stores it efficiently, and prints a sorted course list while allowing students to look up individual courses and their prerequisites.
+In Project One, the problem was choosing the best data structure for ABCU's advising program—one that could load course data from a CSV file, look up individual courses quickly, and print the full catalog in alphanumeric order. I compared vector, hash table, and binary search tree approaches by writing pseudocode for each and analyzing their run-time and memory trade-offs. In Project Two, I implemented the recommended solution: an advising tool that loads the Computer Science course catalog into a binary search tree, prints a sorted course list, and lets students look up courses and their prerequisites.
 
 ### How did you approach the problem? Consider why data structures are important to understand.
 
-I approached each project by implementing one data structure at a time through the weekly labs, then measuring run time with clock timers and analyzing Big-O complexity for each operation. For Project One, I built the same bid-management workflow four different ways so the comparison was fair. For Project Two, I used a binary search tree because in-order traversal naturally produces alphanumeric order without a separate sort step. Understanding data structures matters because the same data can perform very differently depending on how it is organized—a linked list and a hash table both hold records, but search time drops from O(n) to O(1) average when the right structure is chosen.
+I approached Project One by designing pseudocode for the same menu-driven workflow using three different data structures, then analyzing Big-O complexity for load, search, and print operations along with memory overhead for each. For Project Two, I implemented the binary search tree because in-order traversal naturally produces alphanumeric order without a separate sort step, and search runs in O(log n) on average. Understanding data structures matters because the same course catalog can be stored many ways—a vector requires O(n log n) sorting to print the list, while a hash table needs a temporary vector and sort, but a BST prints sorted output in O(n) with a single traversal.
 
 ### How did you overcome any roadblocks you encountered while going through the activities or project?
 
